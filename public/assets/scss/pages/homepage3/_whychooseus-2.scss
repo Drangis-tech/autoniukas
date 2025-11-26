@@ -1,0 +1,75 @@
+.bg-whychooseus-2 {
+    position: relative;
+    background-image: url(../imgs/page/homepage3/bg-whychooseus.png);
+    background-size: cover;
+    &::before {
+        content: "";
+        height: 100%;
+        width: 100%;
+        background-color: $color-brand-2;  // Navy background
+        opacity: 0.8;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        position: absolute;
+    }
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    // Text on navy backgrounds should be white or light gray (not red)
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-white !important;
+        span {
+            color: $color-white !important;  // Spans should also be white, not red
+        }
+    }
+    p, span, div {
+        color: $color-gray-200 !important;  // Light gray for body text
+    }
+    .color-white {
+        color: $color-white !important;
+    }
+    // Buttons can still use red
+    .btn-brand-1 {
+        background-color: $color-brand-1 !important;
+        color: $color-white !important;
+    }
+}
+.box-item-number {
+    position: relative;
+    padding: 35px 26px;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 96px;
+        height: 100%;
+        z-index: 1;
+        background-color: $color-brand-1;
+    }
+    .item-number {
+        position: relative;
+        z-index: 2;
+    }
+    &.box-item-number-white {
+        &::before {
+            background-color: $background-white;
+        }
+    }
+    &.box-item-number-2 {
+        position: relative;
+        padding: 35px 5px 35px 35px;
+        margin-left: 40px;
+    }
+    &.box-item-number-3 {
+        position: relative;
+        padding: 35px 5px 35px 45px;
+    }
+    &.box-item-number-4 {
+        position: relative;
+        padding: 35px 5px 35px 60px;
+        margin-left: 40px;
+    }
+}

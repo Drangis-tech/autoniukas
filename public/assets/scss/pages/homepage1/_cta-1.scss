@@ -1,0 +1,34 @@
+.bg-get-quote {
+    background-color: $color-brand-2;  // Navy background
+    background-image: url(../imgs/page/homepage1/bg-get-quote.png);
+    background-position: top center;
+    background-repeat: no-repeat;
+    // Text on navy backgrounds should be white or light gray (not red)
+    h1, h2, h3, h4, h5, h6 {
+        color: $color-white !important;
+    }
+    p, span, div {
+        color: $color-gray-200 !important;  // Light gray for body text
+    }
+    .color-white {
+        color: $color-white !important;
+    }
+    // Buttons can still use red
+    .btn-brand-1 {
+        background-color: $color-brand-1 !important;
+        color: $color-white !important;
+    }
+}
+.box-get-quote {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.get-quote-left {
+    width: 100%;
+}
+.get-quote-right {
+    min-width: 253px;
+    max-width: 253px;
+    width: 100%;
+}

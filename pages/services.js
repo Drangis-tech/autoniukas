@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import CountUp from '@/components/elements/CounterUp'
 import Accordion from "@/components/elements/Accordion"
 import Layout from "@/components/layout/Layout"
-import Pricing2 from "@/components/sections/homepage2/Pricing2"
+import Pricing1 from "@/components/sections/homepage1/Pricing1"
 import Link from "next/link"
 
 export default function Service() {
@@ -312,7 +312,7 @@ export default function Service() {
                         </div>
                     </div>
                 </section>
-                <Pricing2 />
+                <Pricing1 />
                 <div className="line-border" />
                 <section className="section pt-80 mb-70 bg-faqs">
                     <div className="container">

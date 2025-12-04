@@ -8,13 +8,13 @@ export default function Info1() {
                     <div className="text-center"><img className="mb-15" src="/autoniukas_icon.svg" alt="autoniukas" style={{ height: '50px' }} />
                         <p className="font-md color-grey-700 wow animate__animated animate__fadeIn">Rezultatai Pramonės
                             Lyderiams</p>
-                        <h2 className="color-brand-2 mb-65 mt-15 wow animate__animated animate__fadeIn">Didžiuojamės savo
+                        <h2 className="color-grey-900 mb-65 mt-15 wow animate__animated animate__fadeIn">Didžiuojamės savo
                             darbuotojais<br className="d-none d-lg-block" />ir įdėtu sunkiu darbu.</h2>
                     </div>
                     <div className="row mt-50 align-items-center">
                         <div className="col-xl-7 col-lg-6 mb-30">
                             <div className="box-images-pround">
-                                <div className="box-images wow animate__animated animate__fadeIn"><img className="img-main" src="/assets/imgs/page/homepage1/img1.png" alt="transp" />
+                                <div className="box-images wow animate__animated animate__fadeIn"><img className="img-main" src="/loading.jpeg" alt="transp" />
                                     <div className="image-2 shape-3">
                                         <div style={{
                                             maskImage: 'url(/assets/imgs/page/homepage1/icon1.png)',

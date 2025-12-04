@@ -3,21 +3,11 @@
     .bg-under {
         position: absolute;
         bottom: -30px;
-        top: 140px;
+        top: -30px;
         left: -100px;
         right: -100px;
-        background: url(../imgs/page/homepage1/bg-offer.png) no-repeat top center;
+        background-color: $color-navy-dark-2;
         z-index: 1;
-        &::before {
-            content: "";
-            position: absolute;
-            bottom: 160px;
-            left: -30px;
-            height: 95px;
-            width: 113px;
-            background: url(../imgs/page/homepage1/quote.png) no-repeat top center;
-            z-index: 1;
-        }
     }
     .row {
         z-index: 2;
@@ -35,13 +25,20 @@
         content: "";
         width: 100%;
         position: absolute;
-        bottom: 0px;
-        top: 0px;
+        bottom: -20px;
+        top: -30px;
         z-index: 1;
         right: 0px;
         left: 0px;
-        background: url(../imgs/page/homepage1/subtract.png) no-repeat center;
-        background-size: contain;
+        background-color: $color-brand-2;
+        -webkit-mask-image: url(../imgs/page/homepage1/subtract.png);
+        mask-image: url(../imgs/page/homepage1/subtract.png);
+        -webkit-mask-repeat: no-repeat;
+        mask-repeat: no-repeat;
+        -webkit-mask-position: center;
+        mask-position: center;
+        -webkit-mask-size: contain;
+        mask-size: contain;
     }
 }
 .image-2 {

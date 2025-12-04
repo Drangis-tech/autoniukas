@@ -23,12 +23,16 @@
     display: flex;
     width: 100%;
     align-items: center;
+    justify-content: space-between;
+    gap: 30px;
 }
 .get-quote-left {
     width: 100%;
+    flex: 1;
 }
 .get-quote-right {
-    min-width: 253px;
-    max-width: 253px;
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-shrink: 0;
 }

@@ -4,21 +4,25 @@ export default function Hero1() {
     return (
         <>
             <section className="section d-block">
-                <div className="banner-1" style={{ backgroundImage: 'url(assets/imgs/page/homepage1/banner.png)' }}>
+                <div className="banner-1" style={{ backgroundImage: 'url(/hero.jpeg)' }}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-12">
-                                <p className="font-md color-white mb-15 wow animate__animated animate__fadeIn" data-wow-delay=".0s">Logistika ir Transportavimas</p>
-                                <h1 className="color-white mb-25 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">Skaitmeninė ir Patikima Transporto<br className="d-none d-lg-block" />Logistikos Įmonė</h1>
+                                <h1 className="mb-25 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" style={{ color: 'white' }}>Skaitmeninė ir Patikima Transporto<br className="d-none d-lg-block" />Logistikos Įmonė</h1>
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <p className="font-md color-white mb-20 wow animate__animated animate__fadeInUp" data-wow-delay=".0s">Mūsų patyrusi problemų sprendėjų komanda ir
+                                        <p className="font-md mb-20 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" style={{ color: 'white' }}>Mūsų patyrusi problemų sprendėjų komanda ir
                                             įsipareigojimas visada derintis prie kliento verslo tikslų
                                             ir uždavinių yra tai, kas lemia abipusę sėkmę.</p>
                                     </div>
                                 </div>
                                 <div className="box-button mt-30">
-                                    <Link className="btn btn-brand-1-big hover-up wow animate__animated animate__fadeInUp" href="#">Skaičiuoti kainą</Link>
+                                    <Link className="btn btn-brand-1 hover-up wow animate__animated animate__fadeInUp" href="/contact">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '8px', verticalAlign: 'middle' }}>
+                                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="white"/>
+                                        </svg>
+                                        Susisiekti
+                                    </Link>
                                 </div>
                             </div>
                         </div>

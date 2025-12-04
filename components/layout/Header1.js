@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useEffect, useState } from 'react';
 import Menu from "./Menu";
 
-export default function Header({ topBarStyle, handleMobileMenuOpen }) {
+export default function Header({ topBarStyle, handleMobileMenuOpen, transparentHeader }) {
     const [scroll, setScroll] = useState(0)
     useEffect(() => {
         document.addEventListener("scroll", () => {
@@ -12,13 +12,20 @@ export default function Header({ topBarStyle, handleMobileMenuOpen }) {
             }
         })
     })
+    
+    const headerClass = transparentHeader 
+        ? (scroll ? "header sticky-bar stick transparent-header" : "header sticky-bar transparent-header")
+        : (scroll ? "header sticky-bar stick" : "header sticky-bar");
+    
+    const logoSrc = (transparentHeader && !scroll) ? "/autoniukas_baltas.svg" : "/autoniukas.png";
+    
     return (
         <>
-            <header className={scroll ? "header sticky-bar stick" : "header sticky-bar"}>
+            <header className={headerClass}>
                 <div className="container">
                     <div className="main-header">
                         <div className="header-left">
-                            <div className="header-logo"><Link className="d-flex" href="/"><img alt="Autoniukas" src="/autoniukas.png" /></Link></div>
+                            <div className="header-logo"><Link className="d-flex" href="/"><img alt="Autoniukas" src={logoSrc} /></Link></div>
                             <div className="header-nav">
                                 <nav className="nav-main-menu d-none d-xl-block">
                                     <Menu />

@@ -7,11 +7,16 @@
     padding: 10px 0px;
 }
 .header {
-    padding: 0px 0;
-    float: left;
+    padding: 5px 0;
     width: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
     border-bottom: 0px solid $color-gray-100;
+    transition: all 0.3s ease;
     .main-header {
         display: flex;
         align-items: center;
@@ -157,6 +162,57 @@
                     .menu-col {
                         width: 20%;
                         padding: 0px 15px;
+                        h6 {
+                            text-align: center;
+                            min-height: 40px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            margin-bottom: 8px;
+                        }
+                        .menu-image {
+                            position: relative;
+                            overflow: hidden;
+                            cursor: pointer;
+                            img {
+                                width: 100%;
+                                display: block;
+                                transition: transform 0.4s ease;
+                            }
+                            .menu-image-overlay {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background-color: rgba($color-brand-1, 0.9);
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                opacity: 0;
+                                transition: opacity 0.4s ease;
+                                .overlay-text {
+                                    color: $color-white;
+                                    font-size: 16px;
+                                    font-weight: 600;
+                                    text-transform: uppercase;
+                                    letter-spacing: 1px;
+                                    transform: translateY(10px);
+                                    transition: transform 0.4s ease;
+                                }
+                            }
+                            &:hover {
+                                img {
+                                    transform: scale(1.1);
+                                }
+                                .menu-image-overlay {
+                                    opacity: 1;
+                                    .overlay-text {
+                                        transform: translateY(0);
+                                    }
+                                }
+                            }
+                        }
                         .megamenu {
                             position: relative;
                             opacity: 1;
@@ -286,25 +342,46 @@
 }
 .sticky-bar {
     &.stick {
-        -webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
-        animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
-        -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
-        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        left: 0;
-        -webkit-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s;
+        -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.1);
         border-bottom: 1px solid $color-gray-100;
         background: #fff;
+        padding: 5px 0;
         &.sticky-white-bg {
             background-color: #fff;
         }
         &.sticky-blue-bg {
             background-color: $color-brand-2;  // Navy
         }
+    }
+}
+
+.transparent-header {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    
+    &:not(.stick) {
+        .nav-main-menu ul li a,
+        .icon-list,
+        .header-logo a,
+        .font-sm,
+        .font-lg {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        .burger-icon span {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        svg {
+            color: rgba(255, 255, 255, 0.9) !important;
+            stroke: rgba(255, 255, 255, 0.9) !important;
+        }
+    }
+    
+    &.stick {
+        background: rgba(255, 255, 255, 0.95) !important;
+        backdrop-filter: blur(10px) !important;
     }
 }
 

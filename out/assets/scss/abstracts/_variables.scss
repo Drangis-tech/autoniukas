@@ -1,0 +1,116 @@
+//1.FONT
+@import url(https://fonts.bunny.net/css?family=epilogue:400,500,600,700);
+$font-head: 'epilogue', sans-serif;
+$font-shippori: 'shippori-mincho', sans-serif;
+$font-chivo: 'chivo', sans-serif;
+$font-3xs: 8px;
+$font-2xs: 10px;
+$font-xs: 12px;
+$font-sm: 14px;
+$font-md: 16px;
+$font-lg: 18px;
+$font-xl: 20px;
+$font-2xl: 24px;
+$font-3xl: 30px;
+//2.COLOR
+// Brand Color Palette - Autoniukas
+// PRIMARY COLORS
+$color-primary-red: #E31E25;
+$color-primary-navy: #234182;
+
+// RED SCALE (for CTAs, highlights, accents)
+$color-red-dark-3: #A31115;
+$color-red-dark-2: #C01519;
+$color-red-dark-1: #D71A20;
+$color-red-main: #E31E25;  // default
+$color-red-light-1: #EF555A;
+$color-red-light-2: #F48A8D;
+$color-red-light-3: #F9C3C4;
+
+// NAVY SCALE (for backgrounds, headings, nav, footer)
+$color-navy-dark-3: #15243F;
+$color-navy-dark-2: #1C2F52;
+$color-navy-dark-1: #1E3A6A;
+$color-navy-main: #234182;  // default
+$color-navy-light-1: #3F5B9A;
+$color-navy-light-2: #7589BF;
+$color-navy-light-3: #B5C2E1;
+
+// NEUTRALS (for text, borders, backgrounds)
+$color-gray-900: #1A1A1A;
+$color-gray-700: #3A3A3A;
+$color-gray-500: #7A7A7A;
+$color-gray-300: #D4D4D4;
+$color-gray-200: #E9E9E9;
+$color-gray-100: #F5F5F5;
+$color-white: #FFFFFF;
+
+// SUPPORT / FEEDBACK COLORS
+$color-success: #2E8B57;
+$color-warning: #F4C430;
+$color-info: #4DA1FF;
+$color-danger: #E31E25;  // reuse primary red
+
+// Legacy mappings for backward compatibility
+$color-brand-1: $color-primary-red;  // Primary red for CTAs
+$color-brand-1-hover: $color-red-dark-2;  // Darker red on hover
+$color-brand-2: $color-primary-navy;  // Primary navy
+$color-brand-3: $color-navy-light-3;  // Light navy for accents
+$color-brand-4: $color-red-light-3;  // Light red for accents
+
+// Additional legacy grays mapped to new palette
+$color-gray-60: $color-gray-900;
+$color-gray-80: $color-gray-200;
+$color-gray-400: $color-gray-500;
+$color-gray-600: $color-navy-dark-2;
+$color-gray-800: $color-navy-dark-3;
+
+$color-gray-50: $color-gray-100;
+
+// Legacy colors
+$color-black: $color-gray-900;
+$color-blue: $color-primary-navy;
+$color-mutted: $color-gray-200;
+$color-border: $color-gray-300;
+
+// End New
+
+//3.Boxshadow
+$box-shadow-1: 0px 10px 42px rgba(1, 9, 20, 0.06);
+$box-shadow-2: 0px 5px 30px rgba(19, 27, 34, 0.12);
+$box-shadow-1-1: 14px 14px 36px rgba(153, 153, 153, 0.22);
+$box-shadow-3: 9px 11px 23px 0px rgba(6, 61, 79, 0.12);
+$box-shadow-4: 4px 6px 23px rgba(228, 92, 35, 0.1);
+$box-shadow-5: 4px 4px 40px rgba(16, 24, 40, 0.1);
+$box-shadow-inner: inset 0px 40px 80px #FCFCFC;
+$box-shadow-6: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+//5. Background
+// New - Updated to use brand palette
+$background-white: #FFFFFF;
+$background-bg-1: #F9C3C4;  // Light red background
+$background-bg-2: #B5C2E1;  // Light navy background
+$background-bg-3: $color-navy-dark-2;  // Dark navy
+
+$background-bg-4: $color-navy-light-3;  // Very light navy
+$background-bg-5: $color-gray-100;  // Light gray
+$background-bg-7: $color-red-light-3;  // Very light red
+$background-bg-8: $color-gray-100;  // Light gray
+$background-bg-9: $color-gray-100;  // Light gray
+$background-bg-10: $color-navy-light-2;  // Medium light navy
+$background-bg-11: $color-gray-100;  // Light gray
+// End new
+// 6. text-shadow
+$text-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+
+// 7. breakpoints
+$grid-breakpoints: ( xs: 0,
+xxsm: 350px,
+xssm: 450px,
+xsm: 500px,
+sm: 576px,
+smd: 650px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1400px);

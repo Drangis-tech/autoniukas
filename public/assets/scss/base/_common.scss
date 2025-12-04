@@ -495,17 +495,17 @@ a {
     }
 }
 .bd-rd4 {
-    border-radius: 4px;
+    border-radius: 0px;
 }
 .bd-rd8 {
-    border-radius: 8px;
+    border-radius: 0px;
 }
 .bd-rd16 {
-    border-radius: 16px;
+    border-radius: 0px;
 }
 .form-control {
     height: 54px;
-    border-radius: 8px;
+    border-radius: 0px;
     color: $color-gray-500;
     border: 1px solid $color-gray-300;  // Updated to use new gray
     padding: 18px 20px;
@@ -568,7 +568,7 @@ a {
     font-size: 16px;
     line-height: 42px;
     color: $color-brand-2;  // Navy
-    border-radius: 8px;
+    border-radius: 0px;
     border: 1px solid $color-gray-200;  // Updated to use new gray
     width: 42px;
     height: 42px;
@@ -579,13 +579,13 @@ a {
     background: url(../imgs/template/icons/prev.svg) no-repeat center;
     min-height: 42px;
     padding: 5px 20px;
-    border-radius: 8px !important;
+    border-radius: 0px !important;
 }
 .pagination li .page-next {
     background: url(../imgs/template/icons/next.svg) no-repeat center;
     min-height: 42px;
     padding: 5px 20px;
-    border-radius: 8px !important;
+    border-radius: 0px !important;
 }
 .pagination li a:hover, .pagination li a.active {
     background-color: $color-brand-1;  // Red
@@ -667,7 +667,7 @@ a {
             {
                 background-color: $color-brand-1;
                 border: 1px solid $color-mutted;
-                border-radius: 4px;
+                border-radius: 0px;
                 color: $color-brand-2;
                 padding: 10px 0px;
                 width: 78px;

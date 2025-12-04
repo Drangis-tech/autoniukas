@@ -46,7 +46,7 @@
 }
 .accordion-button:not(.collapsed) {
     background-color: $color-brand-1;
-    color: $color-brand-2;
+    color: $color-white;
     &::after {
         background-image: url("../imgs/page/homepage1/up.svg");
         transform: rotate(0deg);
@@ -62,11 +62,11 @@
         display: flex;
     }
     .image-faq-1 {
-        width: 46%;
+        width: 50%;
         padding: 0px 10px;
     }
     .image-faq-2 {
-        width: 54%;
+        width: 50%;
         padding: 0px 10px;
     }
 }

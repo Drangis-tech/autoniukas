@@ -8,7 +8,7 @@ import HeaderNewsletter from "./HeaderNewsletter"
 import PageHead from './PageHead'
 import Sidebar from './Sidebar'
 
-export default function Layout({ headerStyle, footerStyle, headTitle, children, topBarStyle }) {
+export default function Layout({ headerStyle, footerStyle, headTitle, children, topBarStyle, transparentHeader }) {
     const [scroll, setScroll] = useState(0)
 
     const [openClass, setOpenClass] = useState('');
@@ -44,10 +44,10 @@ export default function Layout({ headerStyle, footerStyle, headTitle, children, 
         <>
             <PageHead headTitle={headTitle} />
             <div className="body-overlay-1" onClick={handleMobileMenuClose} />
-            {!headerStyle && <Header1 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} />}
-            {headerStyle == 1 && <Header1 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} />}
-            {headerStyle == 2 && <Header2 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} />}
-            {headerStyle == "newsletter" && <HeaderNewsletter topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} />}
+            {!headerStyle && <Header1 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} transparentHeader={transparentHeader} />}
+            {headerStyle == 1 && <Header1 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} transparentHeader={transparentHeader} />}
+            {headerStyle == 2 && <Header2 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} transparentHeader={transparentHeader} />}
+            {headerStyle == "newsletter" && <HeaderNewsletter topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} transparentHeader={transparentHeader} />}
             <Sidebar openClass={openClass} handleMobileMenuClose={handleMobileMenuClose} />
             <main className="main">
                 {children}

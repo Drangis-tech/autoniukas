@@ -26,7 +26,7 @@ export default function Requestquote1() {
     
     return (
         <>
-            <section className="section bg-leading-company" style={{ position: 'relative', overflow: 'hidden' }}>
+            <section className="section bg-leading-company" style={{ position: 'relative', overflow: 'hidden', marginBottom: 0 }}>
                 <div className="container">
                     <div className="text-center mb-45">
                         <h2 className="color-white mb-15 wow animate__animated animate__fadeIn">World's Leading Companies<br className="d-none d-lg-block" />For Over 80 Years.</h2>

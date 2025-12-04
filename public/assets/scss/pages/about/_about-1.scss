@@ -4,6 +4,13 @@
     left: 34%;
     width: 113px;
     height: 95px;
-    background: url(../imgs/page/homepage2/quote.png) no-repeat center;
-    background-size: contain;
+    background-color: $color-brand-1; // Use accent red color
+    -webkit-mask-image: url(../imgs/page/homepage2/quote.png);
+    mask-image: url(../imgs/page/homepage2/quote.png);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
 } 

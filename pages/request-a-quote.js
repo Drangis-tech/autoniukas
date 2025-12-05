@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout";
-import Pricing1 from "@/components/sections/homepage1/Pricing1";
 import Project1Slider from "@/components/slider/Project1Slider";
 import Link from "next/link";
 import { useState } from "react";
@@ -190,9 +189,6 @@ export default function Quote() {
                         </div>
                     </div>
                 </section>
-
-                <Pricing1 />
-
                 <div className="line-border" />
                 <section className="section pb-5 pt-110">
                     <div className="container">

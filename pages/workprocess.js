@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout"
-import Pricing1 from "@/components/sections/homepage1/Pricing1"
 import Project1Slider from "@/components/slider/Project1Slider"
 import Link from "next/link"
 export default function WorkProcess() {
@@ -132,8 +131,6 @@ export default function WorkProcess() {
                     </div>
                 </section>
                 <div className="line-border mt-50" />
-
-                <Pricing1 />
                 <section className="section bg-what-done pb-95 pt-110">
                     <div className="container">
                         <h2 className="title-favicon mb-20 wow animate__animated animate__fadeIn">What We Have Done</h2>

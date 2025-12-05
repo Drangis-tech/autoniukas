@@ -1,5 +1,4 @@
 import Layout from "@/components/layout/Layout"
-import Pricing1 from "@/components/sections/homepage1/Pricing1"
 import ServiceSlider from "@/components/slider/ServiceSlider"
 import Link from "next/link"
 export default function ServiceDetail() {
@@ -161,8 +160,6 @@ export default function ServiceDetail() {
                         </div>
                     </div>
                 </section>
-
-                <Pricing1 />
                 <div className="line-border" />
                 <section className="section pb-5 pt-50 mb-80">
                     <div className="container">

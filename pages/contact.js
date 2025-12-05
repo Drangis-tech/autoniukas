@@ -14,10 +14,10 @@ export default function Contact() {
                 <div className="mt-110" />
                 <section className="section pt-110 pb-100">
                     <div className="container">
-                        <h2 className="mb-20 wow animate__animated animate__fadeIn">Meet Our Team</h2>
+                        <h2 className="mb-20 wow animate__animated animate__fadeIn">Susisiekite su Mumis</h2>
                         <div className="row align-items-center">
                             <div className="col-md-6 mb-30">
-                                <p className="font-md color-grey-700 wow animate__animated animate__fadeIn">Welcome to our tranporation services agency. We are<br className="d-none d-lg-block" />the best at our trans-portation service ever.</p>
+                                <p className="font-md color-grey-700 wow animate__animated animate__fadeIn">Turite klausimų apie krovinių pervežimą ar mūsų teikiamas paslaugas? Mielai padėsime ir pateiksime visą reikiamą informaciją.</p>
                             </div>
                             <div className="col-md-6 mb-30 text-md-end text-start">
                             </div>

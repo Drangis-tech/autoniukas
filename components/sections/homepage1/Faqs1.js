@@ -13,8 +13,7 @@ export default function Faqs1() {
                                     <img src="/autoniukas_icon.svg" alt="autoniukas" style={{ height: '50px' }} />
                                 </div>
                                 <h2 className="mb-20 wow animate__animated animate__fadeIn">DUK</h2>
-                                <p className="font-md color-grey-700 mb-50 wow animate__animated animate__fadeIn">Turite
-                                    klausimų? Perskaitykite mūsų DUK arba susisiekite su mumis pagalbos</p>
+                                <p className="font-md color-grey-700 mb-50 wow animate__animated animate__fadeIn">Turite klausimų? Peržiūrėkite dažniausiai užduodamus klausimus arba susisiekite su mumis — mielai padėsime.</p>
                             </div>
                         </div>
                     </div>

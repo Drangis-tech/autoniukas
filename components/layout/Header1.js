@@ -4,24 +4,39 @@ import Menu from "./Menu";
 
 export default function Header({ topBarStyle, handleMobileMenuOpen, transparentHeader }) {
     const [scroll, setScroll] = useState(0)
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
     useEffect(() => {
-        document.addEventListener("scroll", () => {
+        const handleScroll = () => {
             const scrollCheck = window.scrollY > 100
             if (scrollCheck !== scroll) {
                 setScroll(scrollCheck)
             }
-        })
-    })
+        }
+        document.addEventListener("scroll", handleScroll)
+        return () => document.removeEventListener("scroll", handleScroll)
+    }, [scroll])
+
+    const toggleMobileMenu = () => {
+        setIsMobileMenuOpen(!isMobileMenuOpen)
+    }
+    
+    // When menu is open, we want to keep the header consistent but ensure visibility.
+    // If we switch classes too drastically, layout shifts.
+    // We will keep 'transparent-header' if it was there, but override background color via custom class/style if menu is open.
     
     const headerClass = transparentHeader 
         ? (scroll ? "header sticky-bar stick transparent-header" : "header sticky-bar transparent-header")
         : (scroll ? "header sticky-bar stick" : "header sticky-bar");
     
-    const logoSrc = (transparentHeader && !scroll) ? "/autoniukas_baltas.svg" : "/autoniukas.png";
+    // If menu is open, we force the logo to be the dark one because the background will be white.
+    // Unless the header was already sticky/white, in which case it's already dark.
+    const forceDarkLogo = isMobileMenuOpen;
+    const logoSrc = (transparentHeader && !scroll && !forceDarkLogo) ? "/autoniukas_baltas.svg" : "/autoniukas.png";
     
     return (
         <>
-            <header className={headerClass}>
+            <header className={`${headerClass} ${isMobileMenuOpen ? 'mobile-menu-open' : ''}`}>
                 <div className="container">
                     <div className="main-header">
                         <div className="header-left">
@@ -30,34 +45,121 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                                 <nav className="nav-main-menu d-none d-xl-block">
                                     <Menu />
                                 </nav>
-                                <div className="burger-icon burger-icon-white" onClick={handleMobileMenuOpen}>
+                            </div>
+                            <div className="header-right">
+                                <div className={`burger-icon ${(!scroll && transparentHeader && !isMobileMenuOpen) ? 'burger-icon-white' : ''} ${isMobileMenuOpen ? 'burger-close' : ''}`} onClick={toggleMobileMenu}>
                                     <span className="burger-icon-top" />
                                     <span className="burger-icon-mid" />
                                     <span className="burger-icon-bottom" />
-                                </div>
-                            </div>
-                            <div className="header-right">
-                                <div className="d-inline-block box-dropdown-cart"><span className="font-lg icon-list icon-account"><span className="font-sm color-grey-900 arrow-down">
-                                    <svg fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418">
-                                        </path>
-                                    </svg>English</span></span>
-                                    <div className="dropdown-account">
-                                        <ul>
-                                            <li><Link className="font-md" href="#"><img src="/assets/imgs/template/icons/en.png" alt="transp" />
-                                                English</Link></li>
-                                            <li><Link className="font-md" href="#"><img src="/assets/imgs/template/icons/fr.png" alt="transp" />
-                                                French</Link></li>
-                                            <li><Link className="font-md" href="#"><img src="/assets/imgs/template/icons/cn.png" alt="transp" />
-                                                Chiness</Link></li>
-                                        </ul>
-                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </header>
+
+            <div className={`mobile-menu-dropdown ${isMobileMenuOpen ? 'active' : ''}`}>
+                <div className="container">
+                    <ul className="mobile-nav">
+                        <li><Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>Apie mus</Link></li>
+                        <li><a href="#" onClick={(e) => e.preventDefault()} style={{ opacity: 0.5, cursor: 'default' }}>Paslaugos</a></li>
+                        <li><Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Kontaktai</Link></li>
+                    </ul>
+                </div>
+            </div>
+
+            <style jsx>{`
+                /* Force header background to white when menu is open to match the menu background */
+                .header.mobile-menu-open {
+                    background-color: #fff !important;
+                    box-shadow: none !important; 
+                }
+                
+                /* Header right alignment */
+                .header-right {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    gap: 20px;
+                }
+
+                /* Ensure burger icon stays in place and visible */
+                .burger-icon {
+                    z-index: 1001;
+                    position: relative;
+                    display: block; /* Ensure it's visible when moved here, responsive css might hide it but we want it visible on mobile */
+                }
+
+                /* Hide burger on desktop if needed - relying on bootstrap d-xl-none usually, but here we use media query or existing classes */
+                @media (min-width: 1200px) {
+                    .burger-icon {
+                        display: none;
+                    }
+                }
+
+                .mobile-menu-dropdown {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100vh; /* Full screen to cover everything */
+                    background: #fff;
+                    z-index: 999; /* Below header (1000) so header stays on top */
+                    padding-top: 120px; /* Start below the header */
+                    padding-bottom: 30px;
+                    transform: translateY(-100%);
+                    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+                    opacity: 0;
+                    visibility: hidden;
+                    display: flex;
+                    justify-content: center;
+                }
+                .mobile-menu-dropdown.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .mobile-nav {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    align-items: center;
+                    width: 100%;
+                    text-align: center;
+                }
+                .mobile-nav li {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                    border-bottom: none;
+                    width: 100%;
+                }
+                .mobile-menu-dropdown.active .mobile-nav li {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-delay: 0.1s;
+                }
+                .mobile-menu-dropdown.active .mobile-nav li:nth-child(2) { transition-delay: 0.15s; }
+                .mobile-menu-dropdown.active .mobile-nav li:nth-child(3) { transition-delay: 0.2s; }
+
+                .mobile-nav li a {
+                    display: inline-block;
+                    padding: 15px 0;
+                    font-size: 32px; /* Larger font for impact */
+                    font-weight: 700; /* Bold */
+                    color: #1f2937;
+                    text-decoration: none;
+                    transition: color 0.2s ease, transform 0.2s ease;
+                }
+                .mobile-nav li a:hover {
+                    color: #E93314;
+                    transform: scale(1.05);
+                    padding-left: 0; /* Remove padding shift */
+                }
+            `}</style>
         </>
     )
 }

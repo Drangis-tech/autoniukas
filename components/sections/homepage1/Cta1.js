@@ -8,7 +8,7 @@ export default function Cta1() {
                     <div className="box-get-quote">
                         <div className="get-quote-left">
                             <p className="font-3xl color-white mb-10 wow animate__animated animate__fadeIn">Turite idėjų?</p>
-                            <h2 className="color-white wow animate__animated animate__fadeIn">Kurkite savo kitą projektą su mumis
+                            <h2 className="color-white wow animate__animated animate__fadeIn">Pradėkime bendradarbiavimą jau šiandien
                             </h2>
                         </div>
                         <div className="get-quote-right">

@@ -8,12 +8,10 @@ export default function Hero1() {
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-12">
-                                <h1 className="mb-25 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" style={{ color: 'white' }}>Skaitmeninė ir Patikima Transporto<br className="d-none d-lg-block" />Logistikos Įmonė</h1>
+                                <h1 className="mb-25 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" style={{ color: 'white' }}>Profesionalios Krovinių Pervežimo<br className="d-none d-lg-block" />Paslaugos</h1>
                                 <div className="row">
                                     <div className="col-lg-6">
-                                        <p className="font-md mb-20 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" style={{ color: 'white' }}>Mūsų patyrusi problemų sprendėjų komanda ir
-                                            įsipareigojimas visada derintis prie kliento verslo tikslų
-                                            ir uždavinių yra tai, kas lemia abipusę sėkmę.</p>
+                                        <p className="font-md mb-20 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" style={{ color: 'white' }}>Mūsų komanda užtikrina greitą ir saugų krovinių pervežimą Lietuvoje ir visoje Europoje. Dirbame atsakingai, prisitaikome prie klientų poreikių ir užtikriname, kad siuntos pasiektų tikslą laiku.</p>
                                     </div>
                                 </div>
                                 <div className="box-button mt-30">

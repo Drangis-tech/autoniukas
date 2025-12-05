@@ -14,12 +14,10 @@ export default function Services1() {
                     </div>
                     <div className="row align-items-end">
                         <div className="col-lg-12 mb-30">
-                            <p className="font-md color-gray-700 wow animate__animated animate__fadeIn">Sveiki atvykę į mūsų
-                                transporto paslaugų agentūrą. Mes teikiame geriausias transportavimo paslaugas.</p>
+                            <p className="font-md color-gray-700 wow animate__animated animate__fadeIn">Teikiame patikimas logistikos ir krovinių pervežimo paslaugas Lietuvoje ir visoje Europoje.</p>
                         </div>
                     </div>
-                    <div className="mt-60 box-background-offer">
-                        <div className="bg-under" />
+                    <div className="mt-60">
                         <div className="row">
                             <div className="col-lg-4 col-md-6 wow animate__animated animate__fadeIn">
                                 <div className="card-offer hover-up">

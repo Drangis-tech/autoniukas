@@ -9,21 +9,15 @@ export default function Footer1({ }) {
                         <div className="row">
                             <div className="col-lg-3 mb-30">
                                 <div className="mb-20"><img src="/autoniukas_baltas.svg" alt="transp" style={{ height: '50px' }} /></div>
-                                <p className="font-xs mb-20 color-white">Mes sujungiame savo pasaulinį tinklą su gilia patirtimi
-                                    oro, jūrų, geležinkelių, sunkvežimių ir multimodaliniuose pervežimuose,
-                                    taip pat teikiame tiekimo, sandėliavimo, el. prekybos vykdymo ir pridėtinės vertės
-                                    paslaugas savo klientams, įskaitant komplektavimą, surinkimą, individualizuotą pakavimą ir verslo
-                                    intarpus bei kt.</p>
+                                <p className="font-xs mb-20 color-white">Teikiame patikimas logistikos ir krovinių pervežimo paslaugas Lietuvoje ir Europoje. Mūsų tikslas – saugus ir laiku atliekamas pristatymas kiekvienam klientui.</p>
                             </div>
                             <div className="col-lg-3 mb-30 offset-lg-1">
-                                <h5 className="mb-10 color-white">Įmonė</h5>
+                                <h5 className="mb-10 color-white">Nuorodos</h5>
                                 <ul className="menu-footer">
-                                    <li><Link href="/about">Misija ir Vizija</Link></li>
-                                    <li><Link href="/team">Mūsų Komanda</Link></li>
-                                    <li><Link href="/career">Karjera</Link></li>
-                                    <li><Link href="#">Spauda ir Žiniasklaida</Link></li>
-                                    <li><Link href="#">Reklama</Link></li>
-                                    <li><Link href="#">Atsiliepimai</Link></li>
+                                    <li><Link href="/">Pagrindinis</Link></li>
+                                    <li><Link href="/about">Apie mus</Link></li>
+                                    <li><Link href="/services">Paslaugos</Link></li>
+                                    <li><Link href="/contact">Kontaktai</Link></li>
                                 </ul>
                             </div>
                             <div className="col-lg-3 mb-30 offset-lg-1">

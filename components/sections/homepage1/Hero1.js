@@ -4,7 +4,7 @@ export default function Hero1() {
     return (
         <>
             <section className="section d-block">
-                <div className="banner-1" style={{ backgroundImage: 'url(/hero.jpeg)' }}>
+                <div className="banner-1" style={{ backgroundImage: 'url(/hero_2.webp)' }}>
                     <div className="container">
                         <div className="row align-items-center">
                             <div className="col-lg-12">

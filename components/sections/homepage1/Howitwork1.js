@@ -13,7 +13,7 @@ export default function Howitwork1() {
                     </div>
                     <div className="row mt-50">
                         <div className="col-lg-6 mb-30">
-                            <div className="box-image-how"><img className="w-100 wow animate__animated animate__fadeIn" src="/work.jpeg" alt="transp" />
+                            <div className="box-image-how"><img className="w-100 wow animate__animated animate__fadeIn" src="/work.webp" alt="transp" />
                                 <div className="box-info-bottom-img">
                                     <div className="info-play">
                                         <h4 className="color-white mb-15 wow animate__animated animate__fadeIn">Turime 25 metų

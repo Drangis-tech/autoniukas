@@ -22,11 +22,11 @@ export default function Faqs1() {
                         <div className="col-lg-6">
                             <div className="box-faqs-left">
                                 <div className="box-gallery-faqs">
-                                    <div className="image-top"><img src="/1.jpeg" alt="transp" />
+                                    <div className="image-top"><img src="/1.webp" alt="transp" />
                                     </div>
                                     <div className="image-bottom">
-                                        <div className="image-faq-1"><img src="/3.jpeg" alt="transp" /></div>
-                                        <div className="image-faq-2"><img src="/2.jpeg" alt="transp" /></div>
+                                        <div className="image-faq-1"><img src="/3.webp" alt="transp" /></div>
+                                        <div className="image-faq-2"><img src="/2.webp" alt="transp" /></div>
                                     </div>
                                 </div>
                             </div>

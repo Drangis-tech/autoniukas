@@ -14,7 +14,7 @@ export default function Info1() {
                     <div className="row mt-50 align-items-center">
                         <div className="col-xl-7 col-lg-6 mb-30">
                             <div className="box-images-pround">
-                                <div className="box-images wow animate__animated animate__fadeIn"><img className="img-main" src="/loading.jpeg" alt="transp" />
+                                <div className="box-images wow animate__animated animate__fadeIn"><img className="img-main" src="/loading.webp" alt="transp" />
                                     <div className="image-2 shape-3">
                                         <div style={{
                                             maskImage: 'url(/assets/imgs/page/homepage1/icon1.png)',

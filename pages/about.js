@@ -27,8 +27,8 @@ export default function About() {
                             </div>
                             <div className="col-lg-6 position-relative mb-30 order-1 order-lg-2">
                                 <div className="row align-items-end">
-                                    <div className="col-lg-5 col-md-5 col-sm-5"><img className="mb-20 wow animate__animated animate__fadeIn" src="/about2.jpeg" alt="transp" /><img className="wow animate__animated animate__fadeIn" src="/about3.jpeg" alt="transp" /></div>
-                                    <div className="col-lg-7 col-md-7 col-sm-7"><img className="wow animate__animated animate__fadeIn" src="/about1.jpeg" alt="transp" /></div>
+                                    <div className="col-lg-5 col-md-5 col-sm-5"><img className="mb-20 wow animate__animated animate__fadeIn" src="/about2.webp" alt="transp" /><img className="wow animate__animated animate__fadeIn" src="/about_3.webp" alt="transp" /></div>
+                                    <div className="col-lg-7 col-md-7 col-sm-7"><img className="wow animate__animated animate__fadeIn" src="/about1.webp" alt="transp" /></div>
                                 </div>
                                 <div className="quote-center shape-2" />
                             </div>

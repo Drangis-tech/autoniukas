@@ -5,107 +5,71 @@ export default function Services1() {
         <>
             <section className="section mt-100">
                 <div className="container">
-                    <div className="row align-items-end mb-20">
-                        <div className="col-12">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6 mb-30">
                             <div className="wow animate__animated animate__fadeIn">
-                                <h2 className="mb-0" style={{ lineHeight: '50px' }}>Ką Mes Siūlome</h2>
+                                <h2 className="mb-25" style={{ lineHeight: '50px' }}>Sausumos krovinių pervežimas Lietuvoje ir Europoje</h2>
+                                <p className="font-md color-gray-700 mb-20">
+                                    „Autoniukas“ specializuojasi sausumos krovinių pervežime, užtikrindama saugų, greitą ir patikimą transportavimą Lietuvoje ir visoje Europoje. Dirbame su patyrusiais vairuotojais-ekspeditoriais ir prisitaikome prie kiekvieno kliento poreikių.
+                                </p>
+                                <p className="font-md color-gray-700 mb-40">
+                                    Nesvarbu, ar tai vienkartinis pervežimas, ar nuolatinis bendradarbiavimas – pasirūpiname visu procesu nuo pakrovimo iki galutinio pristatymo.
+                                </p>
+                                <div className="d-lg-none mb-30 text-center">
+                                    <img className="img-responsive" src="/paslaugos.jpeg" alt="Sausumos transportas" style={{ borderRadius: '10px', maxWidth: '280px' }} />
+                                </div>
+                                <h5 className="color-brand-2 mb-20">Ką siūlome:</h5>
+                                <div className="row">
+                                    <div className="col-md-6">
+                                        <ul className="list-unstyled">
+                                            <li className="mb-20 d-flex">
+                                                <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span>Pilnų ir dalinių krovinių pervežimas</span>
+                                            </li>
+                                            <li className="mb-20 d-flex">
+                                                <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span>Vietiniai ir tarptautiniai pervežimai</span>
+                                            </li>
+                                            <li className="mb-20 d-flex">
+                                                <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span>Lankstūs maršrutai pagal poreikius</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <ul className="list-unstyled">
+                                            <li className="mb-20 d-flex">
+                                                <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span>Patyrę vairuotojai-ekspeditoriai</span>
+                                            </li>
+                                            <li className="mb-20 d-flex">
+                                                <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span>Saugus krovinio transportavimas</span>
+                                            </li>
+                                            <li className="mb-20 d-flex">
+                                                <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                <span>Laiku vykdomi pristatymai</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className="row align-items-end">
-                        <div className="col-lg-12 mb-30">
-                            <p className="font-md color-gray-700 wow animate__animated animate__fadeIn">Teikiame patikimas logistikos ir krovinių pervežimo paslaugas Lietuvoje ir visoje Europoje.</p>
-                        </div>
-                    </div>
-                    <div className="mt-60">
-                        <div className="row">
-                            <div className="col-lg-4 col-md-6 wow animate__animated animate__fadeIn">
-                                <div className="card-offer hover-up">
-                                    <div className="card-image"><img src="/assets/imgs/page/homepage1/cargo-ship.png" alt="transp" /></div>
-                                    <div className="card-info">
-                                        <h5 className="color-brand-2 mb-15">Jūrų transportas</h5>
-                                        <p className="font-sm color-grey-900 mb-35">Esame profesionalai jūrų krovinių pervežime su
-                                            daugiau nei 12 metų patirtimi ir esame pervežę daugiau nei 100 tūkst. siuntų.</p>
-                                        <div className="box-button-offer mb-30"><a className="btn btn-link font-sm color-brand-2">Peržiūrėti detales<span>
-                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 wow animate__animated animate__fadeIn">
-                                <div className="card-offer hover-up">
-                                    <div className="card-image"><img src="/assets/imgs/page/homepage1/plane.png" alt="transp" />
-                                    </div>
-                                    <div className="card-info">
-                                        <h5 className="color-brand-2 mb-15">Oro transportas</h5>
-                                        <p className="font-sm color-grey-900 mb-35">Esame profesionalai oro krovinių pervežime su
-                                            daugiau nei 12 metų patirtimi ir esame pervežę daugiau nei 100 tūkst. siuntų.</p>
-                                        <div className="box-button-offer mb-30"><a className="btn btn-link font-sm color-brand-2">Peržiūrėti detales<span>
-                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 wow animate__animated animate__fadeIn">
-                                <div className="card-offer hover-up">
-                                    <div className="card-image"><img src="/assets/imgs/page/homepage1/delivery.png" alt="transp" />
-                                    </div>
-                                    <div className="card-info">
-                                        <h5 className="color-brand-2 mb-15">Sausumos transportas</h5>
-                                        <p className="font-sm color-grey-900 mb-35">Esame profesionalai sausumos pervežime su
-                                            daugiau nei 12 metų patirtimi ir esame pervežę daugiau nei 100 tūkst. siuntų.</p>
-                                        <div className="box-button-offer mb-30"><a className="btn btn-link font-sm color-brand-2">Peržiūrėti detales<span>
-                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 wow animate__animated animate__fadeIn">
-                                <div className="card-offer hover-up">
-                                    <div className="card-image"><img src="/assets/imgs/page/homepage1/forklift.png" alt="transp" />
-                                    </div>
-                                    <div className="card-info">
-                                        <h5 className="color-brand-2 mb-15">Sandėliavimas ir distribucija</h5>
-                                        <p className="font-sm color-grey-900 mb-35">Esame profesionalai sandėliavimo srityje su
-                                            daugiau nei 12 metų patirtimi ir esame pervežę daugiau nei 100 tūkst. siuntų.</p>
-                                        <div className="box-button-offer mb-30"><a className="btn btn-link font-sm color-brand-2">Peržiūrėti detales<span>
-                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 wow animate__animated animate__fadeIn">
-                                <div className="card-offer hover-up">
-                                    <div className="card-image"><img src="/assets/imgs/page/homepage1/train.png" alt="transp" />
-                                    </div>
-                                    <div className="card-info">
-                                        <h5 className="color-brand-2 mb-15">Geležinkelių logistika</h5>
-                                        <p className="font-sm color-grey-900 mb-35">Esame profesionalai geležinkelių logistikoje su
-                                            daugiau nei 12 metų patirtimi ir esame pervežę daugiau nei 100 tūkst. siuntų.</p>
-                                        <div className="box-button-offer mb-30"><a className="btn btn-link font-sm color-brand-2">Peržiūrėti detales<span>
-                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></span></a></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-lg-4 col-md-6 wow animate__animated animate__fadeIn">
-                                <div className="card-offer hover-up">
-                                    <div className="card-image"><img src="/assets/imgs/page/homepage1/worldwide.png" alt="transp" /></div>
-                                    <div className="card-info">
-                                        <h5 className="color-brand-2 mb-15">Tarptautiniai pervežimai</h5>
-                                        <p className="font-sm color-grey-900 mb-35">Esame profesionalai tarptautiniuose pervežimuose su
-                                            daugiau nei 12 metų patirtimi ir esame pervežę daugiau nei 100 tūkst. siuntų.</p>
-                                        <div className="box-button-offer mb-30"><a className="btn btn-link font-sm color-brand-2">Peržiūrėti detales<span>
-                                            <svg className="w-6 h-6 icon-16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                            </svg></span></a></div>
-                                    </div>
-                                </div>
+                        <div className="col-lg-6 mb-30 d-none d-lg-block">
+                            <div className="box-image-info wow animate__animated animate__fadeIn">
+                                <img className="img-responsive" src="/paslaugos.jpeg" alt="Sausumos transportas" style={{ borderRadius: '10px' }} />
                             </div>
                         </div>
                     </div>

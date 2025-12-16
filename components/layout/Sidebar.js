@@ -29,7 +29,6 @@ export default function Sidebar({ openClass, handleMobileMenuClose }) {
                             <nav className="mt-15">
                                 <ul className="mobile-menu font-heading">
                                     <li><Link href="/about">Apie mus</Link></li>
-                                    <li><a href="#" onClick={(e) => e.preventDefault()} style={{ opacity: 0.5, cursor: 'default' }}>Paslaugos</a></li>
                                     <li><Link href="/contact">Kontaktai</Link></li>
                                 </ul>
                             </nav>

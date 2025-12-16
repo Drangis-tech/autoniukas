@@ -62,7 +62,6 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                 <div className="container">
                     <ul className="mobile-nav">
                         <li><Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>Apie mus</Link></li>
-                        <li><a href="#" onClick={(e) => e.preventDefault()} style={{ opacity: 0.5, cursor: 'default' }}>Paslaugos</a></li>
                         <li><Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Kontaktai</Link></li>
                     </ul>
                 </div>

@@ -3,7 +3,7 @@ import Link from "next/link"
 import { useLanguage } from "@/contexts/LanguageContext"
 import { useTranslation } from "@/translations"
 
-export default function Contact() {
+export default function ContactEN() {
     const { currentLanguage } = useLanguage()
     const t = useTranslation(currentLanguage.code)
 
@@ -116,7 +116,7 @@ export default function Contact() {
                                         margin: '0',
                                         textTransform: 'uppercase',
                                         letterSpacing: '1px'
-                                    }}>{currentLanguage.code === 'en' ? 'Sweden, Lithuania' : 'Švedija, Lietuva'}</p>
+                                    }}>Sweden, Lithuania</p>
                                 </div>
                             </div>
                             <div className="col-lg-4 col-md-6 mb-30 wow animate__animated animate__fadeIn">
@@ -166,7 +166,7 @@ export default function Contact() {
                                         margin: '0',
                                         textTransform: 'uppercase',
                                         letterSpacing: '1px'
-                                    }}>{currentLanguage.code === 'en' ? 'Denmark, Germany, Lithuania' : 'Danija, Vokietija, Lietuva'}</p>
+                                    }}>Denmark, Germany, Lithuania</p>
                                 </div>
                             </div>
                         </div>
@@ -176,3 +176,4 @@ export default function Contact() {
         </>
     )
 }
+

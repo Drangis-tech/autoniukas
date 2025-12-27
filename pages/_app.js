@@ -5,9 +5,13 @@ import 'swiper/css';
 // import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+import { LanguageProvider } from "@/contexts/LanguageContext"
+
 function MyApp({ Component, pageProps }) {
     return (
-        <Component {...pageProps} />
+        <LanguageProvider>
+            <Component {...pageProps} />
+        </LanguageProvider>
     )
 }
 

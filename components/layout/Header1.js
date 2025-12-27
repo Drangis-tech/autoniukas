@@ -1,10 +1,14 @@
 import Link from "next/link";
 import { useEffect, useState } from 'react';
 import Menu from "./Menu";
+import LanguageSelector from "../elements/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Header({ topBarStyle, handleMobileMenuOpen, transparentHeader }) {
     const [scroll, setScroll] = useState(0)
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+    const { currentLanguage } = useLanguage();
+    const isEnglish = currentLanguage.code === 'en';
 
     useEffect(() => {
         const handleScroll = () => {
@@ -40,13 +44,16 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                 <div className="container">
                     <div className="main-header">
                         <div className="header-left">
-                            <div className="header-logo"><Link className="d-flex" href="/"><img alt="Autoniukas" src={logoSrc} /></Link></div>
+                            <div className="header-logo"><Link className="d-flex" href={isEnglish ? '/en' : '/'}><img alt="Autoniukas" src={logoSrc} /></Link></div>
                             <div className="header-nav">
                                 <nav className="nav-main-menu d-none d-xl-block">
                                     <Menu />
                                 </nav>
                             </div>
                             <div className="header-right">
+                                <LanguageSelector 
+                                    isTransparent={transparentHeader && !scroll && !isMobileMenuOpen} 
+                                />
                                 <div className={`burger-icon ${(!scroll && transparentHeader && !isMobileMenuOpen) ? 'burger-icon-white' : ''} ${isMobileMenuOpen ? 'burger-close' : ''}`} onClick={toggleMobileMenu}>
                                     <span className="burger-icon-top" />
                                     <span className="burger-icon-mid" />
@@ -61,9 +68,12 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
             <div className={`mobile-menu-dropdown ${isMobileMenuOpen ? 'active' : ''}`}>
                 <div className="container">
                     <ul className="mobile-nav">
-                        <li><Link href="/about" onClick={() => setIsMobileMenuOpen(false)}>Apie mus</Link></li>
-                        <li><Link href="/contact" onClick={() => setIsMobileMenuOpen(false)}>Kontaktai</Link></li>
+                        <li><Link href={currentLanguage.code === 'en' ? '/en/about' : '/about'} onClick={() => setIsMobileMenuOpen(false)}>{currentLanguage.code === 'en' ? 'About Us' : 'Apie mus'}</Link></li>
+                        <li><Link href={currentLanguage.code === 'en' ? '/en/contact' : '/contact'} onClick={() => setIsMobileMenuOpen(false)}>{currentLanguage.code === 'en' ? 'Contact' : 'Kontaktai'}</Link></li>
                     </ul>
+                    <div className="mobile-language-selector">
+                        <LanguageSelector isMobileMenu={true} />
+                    </div>
                 </div>
             </div>
 
@@ -157,6 +167,21 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                     color: #E93314;
                     transform: scale(1.05);
                     padding-left: 0; /* Remove padding shift */
+                }
+
+                .mobile-language-selector {
+                    margin-top: 40px;
+                    padding-top: 30px;
+                    border-top: 2px solid #e5e7eb;
+                    opacity: 0;
+                    transform: translateY(-10px);
+                    transition: opacity 0.3s ease, transform 0.3s ease;
+                }
+
+                .mobile-menu-dropdown.active .mobile-language-selector {
+                    opacity: 1;
+                    transform: translateY(0);
+                    transition-delay: 0.25s;
                 }
             `}</style>
         </>

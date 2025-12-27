@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Services1() {
+    const { currentLanguage } = useLanguage();
+    const isEnglish = currentLanguage.code === 'en';
+
     return (
         <>
             <section className="section mt-100">
@@ -8,17 +12,25 @@ export default function Services1() {
                     <div className="row align-items-center">
                         <div className="col-lg-6 mb-30">
                             <div className="wow animate__animated animate__fadeIn">
-                                <h2 className="mb-25" style={{ lineHeight: '50px' }}>Sausumos krovinių pervežimas Lietuvoje ir Europoje</h2>
+                                <h2 className="mb-25" style={{ lineHeight: '50px' }}>
+                                    {isEnglish 
+                                        ? 'Ground Cargo Transportation in Lithuania and Europe' 
+                                        : 'Sausumos krovinių pervežimas Lietuvoje ir Europoje'}
+                                </h2>
                                 <p className="font-md color-gray-700 mb-20">
-                                    „Autoniukas“ specializuojasi sausumos krovinių pervežime, užtikrindama saugų, greitą ir patikimą transportavimą Lietuvoje ir visoje Europoje. Dirbame su patyrusiais vairuotojais-ekspeditoriais ir prisitaikome prie kiekvieno kliento poreikių.
+                                    {isEnglish 
+                                        ? '"Autoniukas" specializes in ground cargo transportation, ensuring safe, fast, and reliable transport in Lithuania and throughout Europe. We work with experienced drivers-forwarders and adapt to each client\'s needs.' 
+                                        : '„Autoniukas" specializuojasi sausumos krovinių pervežime, užtikrindama saugų, greitą ir patikimą transportavimą Lietuvoje ir visoje Europoje. Dirbame su patyrusiais vairuotojais-ekspeditoriais ir prisitaikome prie kiekvieno kliento poreikių.'}
                                 </p>
                                 <p className="font-md color-gray-700 mb-40">
-                                    Nesvarbu, ar tai vienkartinis pervežimas, ar nuolatinis bendradarbiavimas – pasirūpiname visu procesu nuo pakrovimo iki galutinio pristatymo.
+                                    {isEnglish 
+                                        ? 'Whether it\'s a one-time transport or ongoing cooperation – we take care of the entire process from loading to final delivery.' 
+                                        : 'Nesvarbu, ar tai vienkartinis pervežimas, ar nuolatinis bendradarbiavimas – pasirūpiname visu procesu nuo pakrovimo iki galutinio pristatymo.'}
                                 </p>
                                 <div className="d-lg-none mb-30 text-center">
                                     <img className="img-responsive" src="/paslaugos.jpeg" alt="Sausumos transportas" style={{ borderRadius: '10px', maxWidth: '280px' }} />
                                 </div>
-                                <h5 className="color-brand-2 mb-20">Ką siūlome:</h5>
+                                <h5 className="color-brand-2 mb-20">{isEnglish ? 'What We Offer:' : 'Ką siūlome:'}</h5>
                                 <div className="row">
                                     <div className="col-md-6">
                                         <ul className="list-unstyled">
@@ -26,19 +38,19 @@ export default function Services1() {
                                                 <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <span>Pilnų ir dalinių krovinių pervežimas</span>
+                                                <span>{isEnglish ? 'Full and partial load transportation' : 'Pilnų ir dalinių krovinių pervežimas'}</span>
                                             </li>
                                             <li className="mb-20 d-flex">
                                                 <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <span>Vietiniai ir tarptautiniai pervežimai</span>
+                                                <span>{isEnglish ? 'Domestic and international transport' : 'Vietiniai ir tarptautiniai pervežimai'}</span>
                                             </li>
                                             <li className="mb-20 d-flex">
                                                 <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <span>Lankstūs maršrutai pagal poreikius</span>
+                                                <span>{isEnglish ? 'Flexible routes according to needs' : 'Lankstūs maršrutai pagal poreikius'}</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -48,19 +60,19 @@ export default function Services1() {
                                                 <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <span>Patyrę vairuotojai-ekspeditoriai</span>
+                                                <span>{isEnglish ? 'Experienced drivers-forwarders' : 'Patyrę vairuotojai-ekspeditoriai'}</span>
                                             </li>
                                             <li className="mb-20 d-flex">
                                                 <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <span>Saugus krovinio transportavimas</span>
+                                                <span>{isEnglish ? 'Safe cargo transportation' : 'Saugus krovinio transportavimas'}</span>
                                             </li>
                                             <li className="mb-20 d-flex">
                                                 <svg className="w-6 h-6 icon-16 mr-10 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                                                 </svg>
-                                                <span>Laiku vykdomi pristatymai</span>
+                                                <span>{isEnglish ? 'On-time deliveries' : 'Laiku vykdomi pristatymai'}</span>
                                             </li>
                                         </ul>
                                     </div>

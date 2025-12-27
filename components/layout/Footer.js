@@ -1,34 +1,28 @@
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { useTranslation } from "@/translations";
 
 export default function Footer1({ }) {
+    const { currentLanguage } = useLanguage();
+    const t = useTranslation(currentLanguage.code);
+    const isEnglish = currentLanguage.code === 'en';
+
     return (
         <>
             <footer className="footer">
                 <div className="footer-1">
                     <div className="container">
                         <div className="row">
-                            <div className="col-lg-3 mb-30">
+                            <div className="col-lg-4 mb-30">
                                 <div className="mb-20"><img src="/autoniukas_baltas.svg" alt="transp" style={{ height: '50px' }} /></div>
-                                <p className="font-xs mb-20 color-white">Teikiame patikimas logistikos ir krovinių pervežimo paslaugas Lietuvoje ir Europoje. Mūsų tikslas – saugus ir laiku atliekamas pristatymas kiekvienam klientui.</p>
+                                <p className="font-xs mb-20 color-white">{t.footer.aboutText}</p>
                             </div>
-                            <div className="col-lg-3 mb-30 offset-lg-1">
-                                <h5 className="mb-10 color-white">Nuorodos</h5>
+                            <div className="col-lg-4 mb-30 offset-lg-2">
+                                <h5 className="mb-10 color-white">{t.footer.quickLinks}</h5>
                                 <ul className="menu-footer">
-                                    <li><Link href="/">Pagrindinis</Link></li>
-                                    <li><Link href="/about">Apie mus</Link></li>
-                                    <li><Link href="/services">Paslaugos</Link></li>
-                                    <li><Link href="/contact">Kontaktai</Link></li>
-                                </ul>
-                            </div>
-                            <div className="col-lg-3 mb-30 offset-lg-1">
-                                <h5 className="mb-10 color-white">Paslaugos</h5>
-                                <ul className="menu-footer">
-                                    <li><Link href="#">Oro krovinių gabenimas</Link></li>
-                                    <li><Link href="#">Jūrų krovinių gabenimas</Link></li>
-                                    <li><Link href="#">Geležinkelių krovinių gabenimas</Link></li>
-                                    <li><Link href="#">Sandėliavimas</Link></li>
-                                    <li><Link href="#">Distribucija</Link></li>
-                                    <li><Link href="#">Pridėtinė vertė</Link></li>
+                                    <li><Link href={isEnglish ? '/en' : '/'}>{t.nav.home}</Link></li>
+                                    <li><Link href={isEnglish ? '/en/about' : '/about'}>{t.nav.about}</Link></li>
+                                    <li><Link href={isEnglish ? '/en/contact' : '/contact'}>{t.nav.contact}</Link></li>
                                 </ul>
                             </div>
                         </div>
@@ -38,7 +32,7 @@ export default function Footer1({ }) {
                     <div className="container">
                         <div className="footer-bottom">
                             <div className="row align-items-center">
-                                <div className="col-lg-6 col-md-12 text-center text-lg-start"><span className="color-grey-300 font-md">©Autoniukas, UAB {new Date().getFullYear()}. Visos teisės saugomos.</span></div>
+                                <div className="col-lg-6 col-md-12 text-center text-lg-start"><span className="color-grey-300 font-md">©Autoniukas, UAB {new Date().getFullYear()}. {t.footer.allRightsReserved}.</span></div>
                                 <div className="col-lg-6 col-md-12 text-center text-lg-end">
                                 </div>
                             </div>

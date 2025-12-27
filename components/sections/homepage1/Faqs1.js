@@ -1,7 +1,11 @@
 import Accordion from "@/components/elements/Accordion";
 import Link from "next/link";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 export default function Faqs1() {
+    const { currentLanguage } = useLanguage();
+    const isEnglish = currentLanguage.code === 'en';
+
     return (
         <>
             <section className="section pt-80 mb-70 bg-faqs">
@@ -12,8 +16,12 @@ export default function Faqs1() {
                                 <div className="mb-20 wow animate__animated animate__fadeIn">
                                     <img src="/autoniukas_icon.svg" alt="autoniukas" style={{ height: '50px' }} />
                                 </div>
-                                <h2 className="mb-20 wow animate__animated animate__fadeIn">DUK</h2>
-                                <p className="font-md color-grey-700 mb-50 wow animate__animated animate__fadeIn">Turite klausimų? Peržiūrėkite dažniausiai užduodamus klausimus arba susisiekite su mumis — mielai padėsime.</p>
+                                <h2 className="mb-20 wow animate__animated animate__fadeIn">{isEnglish ? 'FAQ' : 'DUK'}</h2>
+                                <p className="font-md color-grey-700 mb-50 wow animate__animated animate__fadeIn">
+                                    {isEnglish 
+                                        ? 'Have questions? Review the frequently asked questions or contact us — we\'ll be happy to help.' 
+                                        : 'Turite klausimų? Peržiūrėkite dažniausiai užduodamus klausimus arba susisiekite su mumis — mielai padėsime.'}
+                                </p>
                             </div>
                         </div>
                     </div>

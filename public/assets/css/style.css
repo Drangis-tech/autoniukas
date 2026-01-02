@@ -3259,7 +3259,7 @@ iframe {
 
 .burger-icon.burger-icon-white > span::before,
 .burger-icon.burger-icon-white > span::after {
-  background-color: #7A7A7A;
+  background-color: #ffffff;
 }
 
 .burger-icon.burger-close.burger-icon-white > span::before,

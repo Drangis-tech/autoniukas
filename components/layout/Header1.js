@@ -68,8 +68,26 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
             <div className={`mobile-menu-dropdown ${isMobileMenuOpen ? 'active' : ''}`}>
                 <div className="container">
                     <ul className="mobile-nav">
-                        <li><Link href={currentLanguage.code === 'en' ? '/en/about' : '/about'} onClick={() => setIsMobileMenuOpen(false)}>{currentLanguage.code === 'en' ? 'About Us' : 'Apie mus'}</Link></li>
-                        <li><Link href={currentLanguage.code === 'en' ? '/en/contact' : '/contact'} onClick={() => setIsMobileMenuOpen(false)}>{currentLanguage.code === 'en' ? 'Contact' : 'Kontaktai'}</Link></li>
+                        <li>
+                            <Link 
+                                href={currentLanguage.code === 'en' ? '/en/about' : '/about'} 
+                                onClick={() => setIsMobileMenuOpen(false)} 
+                                className="mobile-menu-link"
+                                style={{ fontSize: '40px', lineHeight: '80px' }}
+                            >
+                                {currentLanguage.code === 'en' ? 'About Us' : 'Apie mus'}
+                            </Link>
+                        </li>
+                        <li>
+                            <Link 
+                                href={currentLanguage.code === 'en' ? '/en/contact' : '/contact'} 
+                                onClick={() => setIsMobileMenuOpen(false)} 
+                                className="mobile-menu-link"
+                                style={{ fontSize: '40px', lineHeight: '80px' }}
+                            >
+                                {currentLanguage.code === 'en' ? 'Contact' : 'Kontaktai'}
+                            </Link>
+                        </li>
                     </ul>
                     <div className="mobile-language-selector">
                         <LanguageSelector isMobileMenu={true} />
@@ -97,6 +115,7 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                     z-index: 1001;
                     position: relative;
                     display: block; /* Ensure it's visible when moved here, responsive css might hide it but we want it visible on mobile */
+                    top: 0;
                 }
 
                 /* Hide burger on desktop if needed - relying on bootstrap d-xl-none usually, but here we use media query or existing classes */
@@ -138,6 +157,7 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                     align-items: center;
                     width: 100%;
                     text-align: center;
+                    line-height: 80px;
                 }
                 .mobile-nav li {
                     opacity: 0;
@@ -145,6 +165,7 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                     transition: opacity 0.3s ease, transform 0.3s ease;
                     border-bottom: none;
                     width: 100%;
+                    margin-bottom: 15px;
                 }
                 .mobile-menu-dropdown.active .mobile-nav li {
                     opacity: 1;
@@ -154,19 +175,25 @@ export default function Header({ topBarStyle, handleMobileMenuOpen, transparentH
                 .mobile-menu-dropdown.active .mobile-nav li:nth-child(2) { transition-delay: 0.15s; }
                 .mobile-menu-dropdown.active .mobile-nav li:nth-child(3) { transition-delay: 0.2s; }
 
-                .mobile-nav li a {
-                    display: inline-block;
-                    padding: 15px 0;
-                    font-size: 32px; /* Larger font for impact */
-                    font-weight: 700; /* Bold */
-                    color: #1f2937;
+                .mobile-menu-link {
+                    display: block;
+                    width: 100%;
+                    padding: 25px;
+                    font-size: 40px !important;
+                    line-height: 80px !important;
+                    font-weight: 700 !important;
+                    color: #1f2937 !important;
+                    background-color: #f3f4f6; /* Light gray background */
+                    border-radius: 12px;
                     text-decoration: none;
-                    transition: color 0.2s ease, transform 0.2s ease;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
                 }
-                .mobile-nav li a:hover {
-                    color: #E93314;
-                    transform: scale(1.05);
-                    padding-left: 0; /* Remove padding shift */
+                .mobile-menu-link:hover {
+                    background-color: #E93314; /* Brand color */
+                    color: #ffffff !important;
+                    transform: translateY(-2px);
+                    box-shadow: 0 6px 12px rgba(233, 51, 20, 0.2);
                 }
 
                 .mobile-language-selector {

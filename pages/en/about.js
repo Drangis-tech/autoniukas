@@ -12,7 +12,11 @@ export default function AboutEN() {
 
     return (
         <>
-            <Layout>
+            <Layout
+                headTitle="About Us - Autoniukas | Reliable Logistics Company"
+                description="Autoniukas is a reliable logistics and transport company with over 11 years of experience. We provide professional cargo transportation services in Lithuania and Europe."
+                url="https://autoniukas.lt/en/about"
+            >
                 <div className="mt-110" />
                 <section className="section pt-110 pb-100">
                     <div className="container">

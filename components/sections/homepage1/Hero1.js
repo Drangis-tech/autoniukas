@@ -15,7 +15,7 @@ export default function Hero1() {
                         <div className="row align-items-center">
                             <div className="col-lg-12">
                                 <h1 className="mb-25 wow animate__animated animate__fadeInUp" data-wow-delay=".0s" style={{ color: 'white' }}>
-                                    {isEnglish ? 'Professional Cargo Transportation' : 'Profesionalios Krovinių Pervežimo'}
+                                    {isEnglish ? 'Professional Cargo Transportation ' : 'Profesionalios Krovinių Pervežimo '}
                                     <br className="d-none d-lg-block" />
                                     {isEnglish ? 'Services' : 'Paslaugos'}
                                 </h1>

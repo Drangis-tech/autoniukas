@@ -12,7 +12,11 @@ export default function About() {
 
     return (
         <>
-            <Layout>
+            <Layout
+                headTitle="Apie Mus - Autoniukas | Patikima Logistikos Imone"
+                description="Autoniukas - patikima logistikos ir transporto imone su daugiau nei 11 metu patirtimi. Teikiame profesionalias kroviniu pervezimo paslaugas Lietuvoje ir Europoje."
+                url="https://autoniukas.lt/about"
+            >
                 <div className="mt-110" />
                 <section className="section pt-110 pb-100">
                     <div className="container">

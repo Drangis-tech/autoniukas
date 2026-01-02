@@ -15,7 +15,11 @@ export default function Contact() {
                     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25) !important;
                 }
             `}</style>
-            <Layout>
+            <Layout
+                headTitle="Kontaktai - Autoniukas | Susisiekite Su Mumis"
+                description="Susisiekite su Autoniukas logistikos imone. Tel.: +370 638 81847, +370 630 94599. El. pastas: niukasauto@gmail.com. Adresas: Kovo 11-osios g. 5, Silale."
+                url="https://autoniukas.lt/contact"
+            >
                 <div className="mt-110" />
                 <section className="section pt-110 pb-100">
                     <div className="container">

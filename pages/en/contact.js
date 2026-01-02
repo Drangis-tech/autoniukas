@@ -15,7 +15,11 @@ export default function ContactEN() {
                     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25) !important;
                 }
             `}</style>
-            <Layout>
+            <Layout
+                headTitle="Contact - Autoniukas | Get in Touch"
+                description="Contact Autoniukas logistics company. Phone: +370 638 81847, +370 630 94599. Email: niukasauto@gmail.com. Address: Kovo 11-osios g. 5, Šilalė."
+                url="https://autoniukas.lt/en/contact"
+            >
                 <div className="mt-110" />
                 <section className="section pt-110 pb-100">
                     <div className="container">

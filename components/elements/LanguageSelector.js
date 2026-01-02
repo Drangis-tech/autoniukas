@@ -57,13 +57,13 @@ export default function LanguageSelector({ isMobileMenu = false, isTransparent =
           
           .language-button {
             flex: 1;
-            max-width: 100px;
-            padding: 12px 24px;
-            border-radius: 8px;
+            max-width: 140px;
+            padding: 15px 30px;
+            border-radius: 10px;
             border: 2px solid #e5e7eb;
             background: white;
             color: #374151;
-            font-size: 14px;
+            font-size: 18px;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s ease;
@@ -249,4 +249,5 @@ export default function LanguageSelector({ isMobileMenu = false, isTransparent =
     </div>
   );
 }
+
 

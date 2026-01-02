@@ -9,13 +9,20 @@ import Info2 from "@/components/sections/homepage1/Info2"
 import News1 from "@/components/sections/homepage1/News1"
 import Requestquote1 from "@/components/sections/homepage1/Requestquote1"
 import Services1 from "@/components/sections/homepage1/Services1"
+import Services2 from "@/components/sections/homepage1/Services2"
 
 export default function HomeEN() {
     return (
         <>
-            <Layout transparentHeader={true}>
+            <Layout 
+                transparentHeader={true}
+                headTitle="Autoniukas - Professional Cargo Transportation Services in Lithuania and Europe"
+                description="Reliable logistics and cargo transportation services in Lithuania and Europe. Over 11 years of experience. Safe and timely delivery to every client."
+                url="https://autoniukas.lt/en"
+            >
                 <Hero1 />
                 <Services1 />
+                <Services2 />
                 <Info1 />
                 <Howitwork1 />
                 <Faqs1 />

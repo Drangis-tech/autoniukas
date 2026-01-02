@@ -8,7 +8,7 @@ import HeaderNewsletter from "./HeaderNewsletter"
 import PageHead from './PageHead'
 import Sidebar from './Sidebar'
 
-export default function Layout({ headerStyle, footerStyle, headTitle, children, topBarStyle, transparentHeader }) {
+export default function Layout({ headerStyle, footerStyle, headTitle, description, ogImage, url, children, topBarStyle, transparentHeader }) {
     const [scroll, setScroll] = useState(0)
 
     const [openClass, setOpenClass] = useState('');
@@ -42,7 +42,7 @@ export default function Layout({ headerStyle, footerStyle, headTitle, children, 
 
     return (
         <>
-            <PageHead headTitle={headTitle} />
+            <PageHead headTitle={headTitle} description={description} ogImage={ogImage} url={url} />
             <div className="body-overlay-1" onClick={handleMobileMenuClose} />
             {!headerStyle && <Header1 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} transparentHeader={transparentHeader} />}
             {headerStyle == 1 && <Header1 topBarStyle={topBarStyle} scroll={scroll} handleMobileMenuOpen={handleMobileMenuOpen} transparentHeader={transparentHeader} />}

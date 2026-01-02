@@ -9,13 +9,20 @@ import Info2 from "@/components/sections/homepage1/Info2"
 import News1 from "@/components/sections/homepage1/News1"
 import Requestquote1 from "@/components/sections/homepage1/Requestquote1"
 import Services1 from "@/components/sections/homepage1/Services1"
-export default function Home() {
+import Services2 from "@/components/sections/homepage1/Services2"
 
+export default function Home() {
     return (
         <>
-            <Layout transparentHeader={true}>
+            <Layout 
+                transparentHeader={true}
+                headTitle="Autoniukas - Profesionalios Krovinių Pervežimo Paslaugos Lietuvoje ir Europoje"
+                description="Patikimos logistikos ir krovinių pervežimo paslaugos Lietuvoje ir Europoje. Daugiau nei 11 metų patirtis. Saugus ir laiku atliekamas pristatymas kiekvienam klientui."
+                url="https://autoniukas.lt"
+            >
                 <Hero1 />
                 <Services1 />
+                <Services2 />
                 <Info1 />
                 <Howitwork1 />
                 <Faqs1 />
